@@ -3,5 +3,8 @@
   "presets": [
     "./scripts/babelRelayPlugin",
     "react-native"
+  ],
+  "plugins": [
+    "transform-class-properties"
   ]
 }
