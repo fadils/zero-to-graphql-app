@@ -5,6 +5,7 @@
  'use strict';
 
 import Styles from './styles';
+import Toolbar from 'Toolbar';
 import Drawer from 'Drawer';
 import Relay from 'react-relay';
 import React, { Component } from 'react';
@@ -21,7 +22,7 @@ export default class Person extends Component {
     super(props, context);
   }
 
-  render () {
+  render() {
     let dataSource = new ListView.DataSource({
       rowHasChanged: (r1, r2) => r1.__dataID__ !== r2.__dataID__,
     });
@@ -32,13 +33,17 @@ export default class Person extends Component {
       <DrawerLayoutAndroid
         drawerWidth={300}
         drawerPosition={DrawerLayoutAndroid.positions.Left}
-        renderNavigationView={() => <Drawer {...this.props}/>}>
+        renderNavigationView={() => <Drawer {...this.props}/>}
+        ref={'DRAWER'}>
         <View style={Styles.container}>
           <StatusBar
             translucent={true}
             backgroundColor="rgba(255, 160, 0, 0.9)"
             barStyle="light-content"
            />
+          <Toolbar
+            title = {'Zero To GraphQL'}
+            sidebarRef={this} />
           <Text style={Styles.header}>Friends of {this.props.person.firstName}</Text>
           <ListView
             dataSource={myDataSource}
@@ -69,6 +74,10 @@ export default class Person extends Component {
   _changePersonId(personId, personName) {
 		this.props.changePersonId(personId, personName);
 	}
+
+  _openDrawer() {
+    this.refs['DRAWER'].openDrawer();
+  }
 }
 
 export default Relay.createContainer(Person, {

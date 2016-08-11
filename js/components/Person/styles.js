@@ -1,5 +1,6 @@
 'use strict';
 
+import Colors from 'Colors';
 var {
 	StyleSheet,
 } = require('react-native');
@@ -9,6 +10,12 @@ module.exports = StyleSheet.create({
     flex: 1,
 		backgroundColor: 'white',
     paddingTop: 20,
+  },
+	toolbar: {
+    height: 56,
+    backgroundColor: Colors.colorPrimary,
+		fontFamily: 'sans-serif-light',
+		fontStyle: 'italic'
   },
 	header: {
 		margin: 16,
