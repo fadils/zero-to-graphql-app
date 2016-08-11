@@ -20,6 +20,7 @@ module.exports = StyleSheet.create({
 	header: {
 		margin: 16,
 		fontSize: 24,
+		fontFamily: 'sans-serif-light',
 	},
 	hr: {
 		height: 1,
@@ -38,5 +39,8 @@ module.exports = StyleSheet.create({
     borderBottomColor: '#E0E0E0',
 		borderWidth: 1,
 		paddingLeft: 16,
+	},
+	roboto: {
+		fontFamily: 'sans-serif-light',
 	}
 });

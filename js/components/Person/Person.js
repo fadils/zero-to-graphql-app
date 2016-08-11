@@ -58,8 +58,8 @@ export default class Person extends Component {
     return (
       <View style={Styles.listRowContainer}>
         <View style={Styles.listRowCell}>
-          <Text>{person.firstName} {person.lastName}</Text>
-          <Text>{person.email}</Text>
+          <Text style={Styles.roboto}>{person.firstName} {person.lastName}</Text>
+          <Text style={Styles.roboto}>{person.email}</Text>
         </View>
       </View>
     );

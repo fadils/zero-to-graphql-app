@@ -45,6 +45,7 @@ module.exports = StyleSheet.create({
   },
   nameInList: {
     color: '#727272',
+		fontFamily: 'sans-serif-light',
     marginLeft: 16, // 72dp from start: 16 + 40 = avatar's end
     marginTop: 0,
   },
