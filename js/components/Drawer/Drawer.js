@@ -10,7 +10,6 @@ import Styles from './styles';
 import React, { Component } from 'react';
 import {
   View,
-  TouchableOpacity,
   Image,
   Text,
 } from 'react-native';
@@ -68,25 +67,25 @@ export default class Drawer extends Component {
           <DrawerItem
             personName="Steven Luscher"
             avatar={require('../../res/images/Steven.png')}
-            isSelected={personFullName === "Steven Luscher"}
+            isSelected={personFullName === 'Steven Luscher'}
             onPress={() => this._changePersonId('1', 'Steven Luscher')}
             />
           <DrawerItem
             personName="Adrian Holovaty"
             avatar={require('../../res/images/Adrian.png')}
-            isSelected={personFullName === "Adrian Holovaty"}
+            isSelected={personFullName === 'Adrian Holovaty'}
             onPress={() => this._changePersonId('2', 'Adrian Holovaty')}
             />
           <DrawerItem
             personName="Simon Willison"
             avatar={require('../../res/images/Simon.png')}
-            isSelected={personFullName === "Simon Willison"}
+            isSelected={personFullName === 'Simon Willison'}
             onPress={() => this._changePersonId('3', 'Simon Willison')}
             />
           <DrawerItem
             personName="Guido van Rossum"
             avatar={require('../../res/images/Guido.png')}
-            isSelected={personFullName === "Guido van Rossum"}
+            isSelected={personFullName === 'Guido van Rossum'}
             onPress={() => this._changePersonId('4', 'Guido van Rossum')}
             />
         </View>
