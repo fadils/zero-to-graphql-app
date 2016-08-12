@@ -34,7 +34,7 @@ export default class Person extends Component {
         drawerWidth={300}
         drawerPosition={DrawerLayoutAndroid.positions.Left}
         renderNavigationView={() => <Drawer {...this.props}/>}
-        ref={(drawer) => (this._drawer = drawer)}> {/* Eslint issue https://github.com/eslint/eslint/issues/5150 */}
+        ref={(drawer) => (this._drawer = drawer)}>{/* Eslint issue https://github.com/eslint/eslint/issues/5150 */}
         <View style={Styles.container}>
           <StatusBar
             translucent={true}
